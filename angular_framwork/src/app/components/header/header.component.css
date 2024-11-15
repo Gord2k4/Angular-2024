@@ -1,0 +1,71 @@
+/* Reset margin và padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #ffffff; /* Màu nền trắng */
+    border-bottom: 1px solid #dee2e6; /* Đường viền dưới mảnh */
+    padding: 10px 20px; /* Padding cho navbar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+}
+
+/* Hiệu ứng khi navbar cuộn */
+.scrolled {
+    background-color: #007bff; /* Đổi màu nền khi cuộn */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Giảm độ đổ bóng */
+}
+
+/* Định dạng các mục liên kết */
+.navbar .nav-link {
+    color: #495057; /* Màu chữ tối */
+    font-weight: 600; /* Đậm hơn một chút */
+    padding: 10px 15px; /* Padding cho mỗi mục */
+    border-radius: 5px; /* Bo tròn góc */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Hiệu ứng chuyển màu và chuyển động */
+}
+
+.navbar .nav-link:hover {
+    background-color: #e9ecef; /* Màu nền khi hover */
+    color: #007bff; /* Màu chữ khi hover */
+    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+}
+
+.navbar .nav-item.active .nav-link {
+    background-color: #007bff; /* Màu nền cho mục đang active */
+    color: white; /* Màu chữ cho mục đang active */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Đổ bóng cho mục active */
+}
+
+.navbar-toggler {
+    border: none; /* Ẩn đường viền */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0,.5)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu cho icon */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar .nav-link {
+        padding: 10px 8px; /* Padding nhỏ hơn cho mobile */
+    }
+}
+
+/* Cải thiện khoảng cách giữa các mục */
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Căn giữa chiều dọc */
+}
+
+/* Ẩn navbar-toggler khi không cần thiết */
+@media (min-width: 768px) {
+    .navbar-toggler {
+        display: none; /* Ẩn nút điều hướng khi trên màn hình lớn */
+    }
+}

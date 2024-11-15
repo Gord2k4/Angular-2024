@@ -1,0 +1,44 @@
+.container {
+  margin-top: 2rem; /* Khoảng cách phía trên */
+}
+
+.row {
+  display: flex; /* Sử dụng flexbox để căn chỉnh hàng */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.card-img-top {
+  border-radius: 15px; /* Bo góc cho ảnh */
+  max-width: 100%; /* Đảm bảo ảnh không vượt quá kích thước cột */
+  height: auto; /* Giữ tỉ lệ ảnh */
+}
+
+.card-title {
+  font-size: 2rem; /* Kích thước tiêu đề lớn hơn */
+  color: #007bff; /* Màu chữ nổi bật */
+  margin: 0; /* Giảm khoảng cách trên và dưới */
+}
+
+.card-text {
+  color: #495057; /* Màu chữ trung tính */
+  font-size: 1.2rem; /* Kích thước chữ mô tả lớn hơn */
+  margin: 1rem 0; /* Khoảng cách trên và dưới cho mô tả */
+}
+
+.btn-primary {
+  background-color: #ff5722; /* Màu nền nút nổi bật */
+  border: none;
+  border-radius: 20px; /* Bo góc cho nút */
+  padding: 0.5rem 1rem; /* Khoảng cách cho nút */
+  transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và dịch */
+}
+
+.btn-primary:hover {
+  background-color: #e64a19; /* Màu khi hover */
+  transform: translateY(-2px); /* Hiệu ứng dịch lên */
+}
+
+h3 {
+  color: #dc3545; /* Màu chữ cho thông báo không tìm thấy sản phẩm */
+  text-align: center; /* Căn giữa thông báo */
+}

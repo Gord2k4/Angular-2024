@@ -1,0 +1,40 @@
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px; /* Bo góc cho card */
+  height: 100%; /* Đảm bảo tất cả card đều có chiều cao bằng nhau */
+}
+
+.card-body {
+  flex: 1; /* Để body của card có thể mở rộng */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Căn giữa nội dung */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #007bff; /* Màu chữ nổi bật */
+  margin: 0; /* Giảm khoảng cách giữa tiêu đề và mô tả */
+}
+
+.card-text {
+  color: #495057; /* Màu chữ trung tính */
+  font-size: 1rem;
+  flex-grow: 1; /* Để mô tả chiếm không gian còn lại */
+}
+
+.card-footer {
+  background: #f8f9fa; /* Màu nền footer */
+}
+
+.btn-primary {
+  background-color: #ff5722; /* Màu nền nút nổi bật */
+  border: none;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 20px; /* Bo góc cho nút */
+}
+
+.btn-primary:hover {
+  background-color: #e64a19; /* Màu khi hover */
+  transform: translateY(-2px); /* Hiệu ứng dịch lên */
+}

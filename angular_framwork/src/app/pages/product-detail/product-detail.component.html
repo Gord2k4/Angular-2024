@@ -1,0 +1,25 @@
+<!--  @if -->
+<body>
+  @if(product) {
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img [src]="product.image" class="card-img-top" />
+        </div>
+        <div class="col">
+          <h5 class="card-title">{{ product.title }}</h5>
+          <p class="card-text">
+            {{ product.description }}
+          </p>
+          <p>Giá Sản Phẩm: {{ product.price }} VND</p>
+          <a [routerLink]="['/product', product._id, 'bid']" class="btn btn-primary">Đấu Giá</a>
+
+          <a [routerLink]="['/']" class="btn btn-primary">Quay Lại</a>
+        </div>
+      </div>
+    </div>
+    } @else {
+    <h3>Product Not Found</h3>
+    }
+</body>
+  

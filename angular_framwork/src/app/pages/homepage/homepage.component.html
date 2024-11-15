@@ -1,0 +1,28 @@
+<main>
+  <div class="container mt-4">
+    <h1 class="text-center mb-4">Danh Sách Sản Phẩm</h1>
+    <div class="row">
+      <div *ngFor="let product of products; trackBy: trackById" class="col-md-4 mb-4">
+        <div class="card shadow border-light rounded overflow-hidden">
+          <img
+            class="card-img-top"
+            [src]="product.image"
+            alt="{{ product.title }}"
+            style="height: 200px; object-fit: cover;"
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <small class="text-muted">Giá: {{ product.price }} VND</small>
+          </div>
+          <div class="card-footer text-center">
+            <a [routerLink]="['/product', product._id]" class="btn btn-primary">Chi Tiết</a>
+          </div>
+        </div>
+      </div>
+      <ng-container *ngIf="products.length === 0">
+        <li class="text-center">Không có sản phẩm nào.</li>
+      </ng-container>
+    </div>
+  </div>
+</main>

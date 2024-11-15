@@ -1,0 +1,34 @@
+<h2 class="text-center my-3">Product List</h2>
+<div class="container">
+  <div class="card">
+    <a routerLink="/admin/product-add" class="btn btn-success">Create Product</a>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Image</th>
+        <th>price</th>
+        <th>description</th>
+        <th>category</th>
+        <th>Actions</th>
+      </tr>
+
+      @for (product of products; track product._id) {
+      <tr>
+        <td>{{ product.title }}</td>
+        <td><img [src]="product.image" width="100px" /></td>
+        <td>{{product.price}}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.category }}</td>
+        <td>
+          <a [routerLink] ="['/admin/product-edit' , product._id]">
+            <button class="btn btn-info">Edit</button>
+          </a>
+          <button class="btn btn-danger" (click)="handleDeleteProduct(product._id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+      }
+    </table>
+  </div>
+</div>
